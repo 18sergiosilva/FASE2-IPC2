@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Proyecto/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSProyectoIPC2" targetNamespace="http://Proyecto/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSProyecto/WSProyectoIPC2?xsd=1" namespace="http://Proyecto/" />
+    </xsd:schema>
+  </types>
+  <message name="registroIndividual">
+    <part name="parameters" element="tns:registroIndividual" />
+  </message>
+  <message name="registroIndividualResponse">
+    <part name="parameters" element="tns:registroIndividualResponse" />
+  </message>
+  <message name="activarDesactivarCuenta">
+    <part name="parameters" element="tns:activarDesactivarCuenta" />
+  </message>
+  <message name="activarDesactivarCuentaResponse">
+    <part name="parameters" element="tns:activarDesactivarCuentaResponse" />
+  </message>
+  <message name="solicitarChequera">
+    <part name="parameters" element="tns:solicitarChequera" />
+  </message>
+  <message name="solicitarChequeraResponse">
+    <part name="parameters" element="tns:solicitarChequeraResponse" />
+  </message>
+  <message name="empleados">
+    <part name="parameters" element="tns:empleados" />
+  </message>
+  <message name="empleadosResponse">
+    <part name="parameters" element="tns:empleadosResponse" />
+  </message>
+  <message name="prestamos">
+    <part name="parameters" element="tns:prestamos" />
+  </message>
+  <message name="prestamosResponse">
+    <part name="parameters" element="tns:prestamosResponse" />
+  </message>
+  <message name="registroEmpresa">
+    <part name="parameters" element="tns:registroEmpresa" />
+  </message>
+  <message name="registroEmpresaResponse">
+    <part name="parameters" element="tns:registroEmpresaResponse" />
+  </message>
+  <message name="depositoEfectivo">
+    <part name="parameters" element="tns:depositoEfectivo" />
+  </message>
+  <message name="depositoEfectivoResponse">
+    <part name="parameters" element="tns:depositoEfectivoResponse" />
+  </message>
+  <message name="agregarProveedor">
+    <part name="parameters" element="tns:agregarProveedor" />
+  </message>
+  <message name="agregarProveedorResponse">
+    <part name="parameters" element="tns:agregarProveedorResponse" />
+  </message>
+  <message name="agregarStock">
+    <part name="parameters" element="tns:agregarStock" />
+  </message>
+  <message name="agregarStockResponse">
+    <part name="parameters" element="tns:agregarStockResponse" />
+  </message>
+  <message name="agregarProducto">
+    <part name="parameters" element="tns:agregarProducto" />
+  </message>
+  <message name="agregarProductoResponse">
+    <part name="parameters" element="tns:agregarProductoResponse" />
+  </message>
+  <message name="iniciarSesion">
+    <part name="parameters" element="tns:iniciarSesion" />
+  </message>
+  <message name="iniciarSesionResponse">
+    <part name="parameters" element="tns:iniciarSesionResponse" />
+  </message>
+  <message name="depositoCheque">
+    <part name="parameters" element="tns:depositoCheque" />
+  </message>
+  <message name="depositoChequeResponse">
+    <part name="parameters" element="tns:depositoChequeResponse" />
+  </message>
+  <message name="cambiarProducto">
+    <part name="parameters" element="tns:cambiarProducto" />
+  </message>
+  <message name="cambiarProductoResponse">
+    <part name="parameters" element="tns:cambiarProductoResponse" />
+  </message>
+  <message name="crearCuenta">
+    <part name="parameters" element="tns:crearCuenta" />
+  </message>
+  <message name="crearCuentaResponse">
+    <part name="parameters" element="tns:crearCuentaResponse" />
+  </message>
+  <message name="pagarPrestamo">
+    <part name="parameters" element="tns:pagarPrestamo" />
+  </message>
+  <message name="pagarPrestamoResponse">
+    <part name="parameters" element="tns:pagarPrestamoResponse" />
+  </message>
+  <message name="agregarOperador">
+    <part name="parameters" element="tns:agregarOperador" />
+  </message>
+  <message name="agregarOperadorResponse">
+    <part name="parameters" element="tns:agregarOperadorResponse" />
+  </message>
+  <message name="agregarAgencia">
+    <part name="parameters" element="tns:agregarAgencia" />
+  </message>
+  <message name="agregarAgenciaResponse">
+    <part name="parameters" element="tns:agregarAgenciaResponse" />
+  </message>
+  <message name="cambiarCheque">
+    <part name="parameters" element="tns:cambiarCheque" />
+  </message>
+  <message name="cambiarChequeResponse">
+    <part name="parameters" element="tns:cambiarChequeResponse" />
+  </message>
+  <message name="cambiarPassword">
+    <part name="parameters" element="tns:cambiarPassword" />
+  </message>
+  <message name="cambiarPasswordResponse">
+    <part name="parameters" element="tns:cambiarPasswordResponse" />
+  </message>
+  <portType name="WSProyectoIPC2">
+    <operation name="registroIndividual">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/registroIndividualRequest" message="tns:registroIndividual" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/registroIndividualResponse" message="tns:registroIndividualResponse" />
+    </operation>
+    <operation name="activarDesactivarCuenta">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/activarDesactivarCuentaRequest" message="tns:activarDesactivarCuenta" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/activarDesactivarCuentaResponse" message="tns:activarDesactivarCuentaResponse" />
+    </operation>
+    <operation name="solicitarChequera">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/solicitarChequeraRequest" message="tns:solicitarChequera" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/solicitarChequeraResponse" message="tns:solicitarChequeraResponse" />
+    </operation>
+    <operation name="empleados">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/empleadosRequest" message="tns:empleados" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/empleadosResponse" message="tns:empleadosResponse" />
+    </operation>
+    <operation name="prestamos">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/prestamosRequest" message="tns:prestamos" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/prestamosResponse" message="tns:prestamosResponse" />
+    </operation>
+    <operation name="registroEmpresa">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/registroEmpresaRequest" message="tns:registroEmpresa" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/registroEmpresaResponse" message="tns:registroEmpresaResponse" />
+    </operation>
+    <operation name="depositoEfectivo">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/depositoEfectivoRequest" message="tns:depositoEfectivo" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/depositoEfectivoResponse" message="tns:depositoEfectivoResponse" />
+    </operation>
+    <operation name="agregarProveedor">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/agregarProveedorRequest" message="tns:agregarProveedor" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/agregarProveedorResponse" message="tns:agregarProveedorResponse" />
+    </operation>
+    <operation name="agregarStock">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/agregarStockRequest" message="tns:agregarStock" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/agregarStockResponse" message="tns:agregarStockResponse" />
+    </operation>
+    <operation name="agregarProducto">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/agregarProductoRequest" message="tns:agregarProducto" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/agregarProductoResponse" message="tns:agregarProductoResponse" />
+    </operation>
+    <operation name="iniciarSesion">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/iniciarSesionRequest" message="tns:iniciarSesion" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/iniciarSesionResponse" message="tns:iniciarSesionResponse" />
+    </operation>
+    <operation name="depositoCheque">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/depositoChequeRequest" message="tns:depositoCheque" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/depositoChequeResponse" message="tns:depositoChequeResponse" />
+    </operation>
+    <operation name="cambiarProducto">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/cambiarProductoRequest" message="tns:cambiarProducto" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/cambiarProductoResponse" message="tns:cambiarProductoResponse" />
+    </operation>
+    <operation name="crearCuenta">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/crearCuentaRequest" message="tns:crearCuenta" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/crearCuentaResponse" message="tns:crearCuentaResponse" />
+    </operation>
+    <operation name="pagarPrestamo">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/pagarPrestamoRequest" message="tns:pagarPrestamo" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/pagarPrestamoResponse" message="tns:pagarPrestamoResponse" />
+    </operation>
+    <operation name="agregarOperador">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/agregarOperadorRequest" message="tns:agregarOperador" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/agregarOperadorResponse" message="tns:agregarOperadorResponse" />
+    </operation>
+    <operation name="agregarAgencia">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/agregarAgenciaRequest" message="tns:agregarAgencia" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/agregarAgenciaResponse" message="tns:agregarAgenciaResponse" />
+    </operation>
+    <operation name="cambiarCheque">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/cambiarChequeRequest" message="tns:cambiarCheque" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/cambiarChequeResponse" message="tns:cambiarChequeResponse" />
+    </operation>
+    <operation name="cambiarPassword">
+      <input wsam:Action="http://Proyecto/WSProyectoIPC2/cambiarPasswordRequest" message="tns:cambiarPassword" />
+      <output wsam:Action="http://Proyecto/WSProyectoIPC2/cambiarPasswordResponse" message="tns:cambiarPasswordResponse" />
+    </operation>
+  </portType>
+  <binding name="WSProyectoIPC2PortBinding" type="tns:WSProyectoIPC2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="registroIndividual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="activarDesactivarCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="solicitarChequera">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="empleados">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="prestamos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registroEmpresa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="depositoEfectivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarProveedor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="iniciarSesion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="depositoCheque">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearCuenta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="pagarPrestamo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarOperador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarAgencia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarCheque">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cambiarPassword">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSProyectoIPC2">
+    <port name="WSProyectoIPC2Port" binding="tns:WSProyectoIPC2PortBinding">
+      <soap:address location="http://localhost:8080/WSProyecto/WSProyectoIPC2" />
+    </port>
+  </service>
+</definitions>
